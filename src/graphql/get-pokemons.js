@@ -8,6 +8,11 @@ query pokemons($first: Int!){
         image
         maxHP
         maxCP
+        classification
+        types
+        resistant
+        weaknesses
+        fleeRate
         attacks{
             special{
                 name
