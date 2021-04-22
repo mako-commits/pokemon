@@ -7,7 +7,7 @@
   }
   html,
 body {
-  /* background: #000 url('./components/images/all\ pokemon.jfif') repeat center center/cover; */
+  background: #000 url('./components/images/memphis-colorful.png') repeat center center/contain;
  
   height: 100vh;
   color: #000;
@@ -43,7 +43,7 @@ header {
   
   .card {
     cursor: pointer;
-    background-color: transparent;
+    background-color: #fff;
     height: 400px;
     perspective: 1000px;
   }
@@ -87,6 +87,29 @@ header {
     padding-bottom: 5px;
   }
   
+  .footer{
+    background-color: #0e2431;
+    text-align: center;
+    /* font-weight: 500; */
+    padding: 0.5rem 0;
+    margin-top: 2rem;
+    color: #fff;
+   
+  }
+
+  .footer-title{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+
+  }
+  .footer-social{
+    margin-bottom: 0.5rem;
+  }
+  .footer-icon{
+    font-size:1.5rem;
+    color:#fff;
+    margin:0.1rem
+  }
 @media (max-width: 500px) {
     .cards {
       grid-template-columns: 1fr;

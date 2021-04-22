@@ -3,6 +3,7 @@ import ApolloClient from 'apollo-boost'
 import {ApolloProvider} from '@apollo/react-hooks'
 import PokemonsContainer from './containers/PokemonsContainer'
 import Header from './components/Header'
+import { Footer } from './components/Footer'
 
 function App() {
   const client = new ApolloClient({
@@ -16,6 +17,7 @@ function App() {
         <Header/>
       <PokemonsContainer/>
       </div>
+      <Footer/>
       </main>
       
      
