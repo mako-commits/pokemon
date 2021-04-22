@@ -46,6 +46,7 @@ header {
     background-color: #fff;
     height: 400px;
     perspective: 1000px;
+    box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
   }
   
 .pokemon-image {
