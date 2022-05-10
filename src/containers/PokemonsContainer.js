@@ -21,7 +21,7 @@ function PokemonsContainer() {
         </center>
       </>
     );
-  if (error) return <p>Whoops...</p>;
+  if (error) return <p>Whoops...Something went wrong</p>;
   return (
     <div className="pokemon__grid">
       {pokemons &&
