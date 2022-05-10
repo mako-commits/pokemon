@@ -1,124 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  html,
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
 body {
-  background: #000 url('./components/images/memphis-colorful.png') repeat center center/contain;
- 
-  height: 100vh;
-  color: #000;
-  font-family: 'Poppins', sans-serif;
+  background: #24282f;
+  font-family: "Poppins", sans-serif;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.header__info {
+  color: #fff;
+}
+.header__image {
+  margin: 0 auto;
+  width: 340px;
+  height: auto;
+}
+.container__pack {
+  width: 90%;
+  margin: 0 auto;
+}
+.pokemon__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+/* Tablet Styles */
+@media (min-width: 600px) {
+  .container__pack {
+    width: 70%;
+  }
+  .pokemon__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .container__pack {
+    width: 80%;
+  }
+  .pokemon__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.pokemons-container{
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
+.pokemon .pokemon__card figcaption {
+  position: absolute;
 }
 
+.pokemon .pokemon__card {
+  position: relative;
+}
 
-header {
-    margin-top: 2rem;
-    height: 200px;
-  }
-  
-  .header-image {
-    width: 400px;
-  }
-  
-  .center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-  }
-  
-  .card {
-    cursor: pointer;
-    background-color: #fff;
-    height: 400px;
-    perspective: 1000px;
-    box-shadow: 0 4px 25px rgba(14, 36, 49, .15);
-  }
-  
-.pokemon-image {
-    width: 100%;
-    height: 300px;
-    object-fit: fit;
-  }
-  
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  .card:hover .card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .card-front,
-  .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
-  .card-back {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    transform: rotateY(180deg);
-  }
-  
-  .card li {
-    list-style: none;
-    padding-bottom: 5px;
-  }
-  
-  .footer{
-    background-color: #0e2431;
-    text-align: center;
-    /* font-weight: 500; */
-    padding: 0.5rem 0;
-    margin-top: 2rem;
-    color: #fff;
-   
-  }
-
-  .footer-title{
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-
-  }
-  .footer-social{
-    margin-bottom: 0.5rem;
-  }
-  .footer-icon{
-    font-size:1.5rem;
-    color:#fff;
-    margin:0.1rem
-  }
-@media (max-width: 500px) {
-    .cards {
-      grid-template-columns: 1fr;
-    }
-    .pokemon-image {
-      width: 100%;
-      height: 300px;
-      object-fit: contain;
-    }
-  }
-  
+.pokemon__card {
+  overflow: hidden;
+  width: 350px;
+  height: 400px;
+  margin: 10px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+.pokemon__card img {
+  width: 100%;
+  min-height: 100%;
+  transition: 0.6s;
+}
+.pokemon__card figcaption {
+  font-size: 14px;
+  text-shadow: 0 1px 0 rgba(51, 51, 51, 0.3);
+  color: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 40px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  background: rgba(6, 18, 53, 0.6);
+  opacity: 0;
+  transform: scale(1.15);
+  transition: 0s;
+}
+.pokemon__card figcaption h3 {
+  color: yellow;
+  font-size: 36px;
+  margin-bottom: 0;
+  font-weight: bolder;
+}
+.pokemon__card figcaption strong {
+  font-size: 1rem;
+}
+.pokemon__card figcaption li {
+  font-size: 1.1rem;
+}
+.pokemon__card:hover img,
+.pokemon__card:focus img,
+.pokemon__card:active img {
+  filter: blur(3px);
+  transform: scale(0.97);
+}
+.pokemon__card:hover figcaption,
+.pokemon__card:focus figcaption,
+.pokemon__card:active figcaption {
+  opacity: 1;
+  transform: none;
+}
